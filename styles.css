@@ -1,0 +1,96 @@
+/* Estilo Geral */
+@font-face {
+    font-family: 'Josefin';
+    src: url('JosefinSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    color: rgb(3, 180, 3);
+    font-size: 16px;
+    font-family: 'Josefin';
+    background-color: #171515;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    background-size: auto 80%; /* Preenche a tela inteira mantendo a proporção */
+    background-position: calc(100% - 70px) center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    image-rendering: auto; 
+    transition: background-image 0.5s ease-in-out; /* Transição suave ao trocar de fundo */
+}
+
+body.screen-2 {
+    background-image: url('pandinha.png');
+    display: flex;
+    justify-content: flex-start; /* Alinha tudo à esquerda */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    padding-left: 20px;
+    text-align: left;
+}
+
+body.screen-3 {
+    background-image: url('leaozinho-e-pandinha.jpg');
+    display: flex;
+    justify-content: flex-start; /* Alinha tudo à esquerda */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    padding-left: 20px;
+    text-align: left;
+    padding-top: 50px;
+}
+
+/* Estilo para as telas */
+#screen-1, #screen-2, #screen-3 {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Garantir que a tela inicial tenha a classe "active" */
+#screen-1.active, #screen-2.active, #screen-3.active {
+    display: flex;
+}
+
+/* Botões */
+button {
+    margin-bottom: 350px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff4d00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a200ff;
+}
+
+/* Imagem */
+img {
+    max-width: 80%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Animação para o texto da surpresa */
+#surprise-text {
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
